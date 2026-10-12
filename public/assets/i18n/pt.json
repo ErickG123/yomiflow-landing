@@ -3,7 +3,8 @@
     "features": "Recursos",
     "download": "Download",
     "getApp": "Conheça o app",
-    "language": "Escolher idioma"
+    "language": "Escolher idioma",
+    "about": "Sobre"
   },
   "home": {
     "hero": {
@@ -25,7 +26,8 @@
       "good": "Bom",
       "easy": "Fácil",
       "activity": "RITMO DE ESTUDO",
-      "local": "Um histórico local da sua prática diária"
+      "local": "Um histórico local da sua prática diária",
+      "rhythmMedia": "Pr?via do ritmo de estudos"
     },
     "features": {
       "eyebrow": "Um fluxo conectado",
@@ -73,7 +75,8 @@
         "value": "Conhecimento em construção",
         "trend": "No caminho",
         "retention": "Retenção estimada",
-        "jlpt": "Cobertura JLPT"
+        "jlpt": "Cobertura JLPT",
+        "progressMedia": "Pr?via das an?lises de progresso"
       }
     },
     "audio": {
@@ -93,6 +96,48 @@
       "button": "Conheça o YomiFlow",
       "note": "App desktop · Offline-first · Seus dados ficam locais"
     }
+  },
+  "download": {
+    "eyebrow": "Aplicação desktop",
+    "title": "O seu espaço de estudo de japonês está quase a chegar.",
+    "description": "As opções de download para Windows, macOS e Linux estarão disponíveis aqui em breve. O YomiFlow mantém a sua biblioteca de estudos no seu dispositivo."
+  },
+  "deepDive": {
+    "eyebrow": "Veja mais de perto",
+    "mediaLabel": "Vídeo de apresentação do recurso",
+    "notebook": {
+      "title": "Um caderno feito para compreender japonês",
+      "description": "Transforme a leitura numa prática de estudo conectada com notas ricas, análise linguística e ferramentas que mostram o que já conhece.",
+      "benefits": {
+        "first": "Escreva com naturalidade no editor TipTap e mantenha as notas junto dos seus materiais de estudo.",
+        "second": "Explore árvores sintáticas e morfologia para compreender cada frase.",
+        "third": "Use o linter e as estimativas MorphMan para aperfeiçoar notas e escolher a próxima leitura."
+      }
+    },
+    "audioVault": {
+      "title": "A sua biblioteca de áudio sempre à mão",
+      "description": "O Audio Vault reúne áudio local, um reprodutor persistente e uma fila, enquanto a OmniSearch facilita revisitar a sua biblioteca.",
+      "benefits": {
+        "first": "Mantenha um reprodutor e uma fila globais enquanto alterna entre atividades de estudo.",
+        "second": "Guarde materiais de escuta localmente e continue a aprender offline.",
+        "third": "Pesquise notas, cartões e conteúdo em cache com SQLite FTS5."
+      }
+    },
+    "immersion": {
+      "title": "Aprenda com o japonês de que gosta",
+      "description": "Reúna mangá, legendas de vídeo e artigos num fluxo de leitura offline-first, com furigana dinâmico e acesso rápido ao vocabulário.",
+      "benefits": {
+        "first": "Ajuste o furigana dinamicamente ao seu nível de leitura.",
+        "second": "Consulte palavras sem perder o contexto da frase e da mídia.",
+        "third": "Envie vocabulário útil para a repetição espaçada e retenha-o por mais tempo."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "A história de quem criou",
+    "title": "Feito com cuidado para a longa jornada de aprender japonês.",
+    "story": "O YomiFlow é arquitetado por Erick Gabriel dos Santos Alves com uma crença simples: uma ferramenta de estudo bem pensada deve apoiar a curiosidade, a consistência e a autonomia. O produto reúne leitura, escuta, escrita e revisão num espaço sereno, pensado para acompanhar cada estudante.",
+    "credentials": "A engenharia reflete princípios robustos, moldados pela pós-graduação em Engenharia de Software pela Faculdade Descomplica, e uma mentalidade de comunidade fortalecida pela seleção como Google Student Ambassador 2026."
   },
   "footer": {
     "year": "2026",

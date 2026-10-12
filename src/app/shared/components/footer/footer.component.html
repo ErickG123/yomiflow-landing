@@ -3,6 +3,11 @@
     class="mx-auto flex max-w-6xl flex-col gap-4 text-xs text-zinc-500 sm:flex-row sm:items-center sm:justify-between"
   >
     <p>© {{ 'footer.year' | transloco }} YomiFlow. {{ 'footer.rights' | transloco }}</p>
-    <p>{{ 'footer.tagline' | transloco }}</p>
+    <div class="flex items-center gap-5">
+      <a routerLink="/about" class="transition hover:text-zinc-200">{{
+        'nav.about' | transloco
+      }}</a>
+      <p>{{ 'footer.tagline' | transloco }}</p>
+    </div>
   </div>
 </footer>

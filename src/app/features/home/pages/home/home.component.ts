@@ -1,25 +1,27 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
+import { MediaPlaceholderComponent } from '../../../../shared/components/media-placeholder/media-placeholder.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TranslocoModule],
+  imports: [TranslocoModule, RouterLink, MediaPlaceholderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   readonly featureKeys = ['media', 'notebook', 'shadowing', 'srs', 'morphman', 'kana'];
-  readonly featureIcons = ['?', '?', '?', '?', '?', '?'];
+  readonly featureRoutes: Record<string, string> = {
+    media: '/features/immersion',
+    notebook: '/features/notebook',
+    shadowing: '/features/audio-vault',
+    srs: '/features/notebook',
+    morphman: '/features/immersion',
+    kana: '/features/immersion',
+  };
   readonly insightKeys = ['dojo', 'pomodoro', 'heatmap', 'jlpt'];
-  readonly bars = [24, 36, 31, 54, 46, 69, 62, 84, 72, 96, 82, 100];
-  readonly heatmap = Array.from({ length: 40 }, (_, i) =>
-    i % 9 === 0
-      ? 'bg-zinc-800'
-      : i % 5 === 0
-        ? 'bg-emerald-900'
-        : i % 3 === 0
-          ? 'bg-emerald-600'
-          : 'bg-emerald-500/60',
-  );
+  scrollToFeatures(): void {
+    document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+  }
 }
