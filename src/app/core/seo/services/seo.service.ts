@@ -1,5 +1,7 @@
-﻿import { inject, Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { inject, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { SeoContent } from '../models/seo-content.model';
 
 const content: Record<string, SeoContent> = {
@@ -11,29 +13,38 @@ const content: Record<string, SeoContent> = {
     locale: 'en_US',
   },
   pt: {
-    title: 'YomiFlow - Japon\u00eas no seu ritmo',
+    title: 'YomiFlow - Japonês no seu ritmo',
     description:
-      'Imers\u00e3o em japon\u00eas e repeti\u00e7\u00e3o espa\u00e7ada, offline-first. Seu estudo fica guardado localmente.',
+      'Imersão em japonês e repetição espaçada, offline-first. Seu estudo fica guardado localmente.',
     image: '/assets/yomiflow-og.svg',
     locale: 'pt_BR',
   },
   es: {
-    title: 'YomiFlow - Japon\u00e9s a tu ritmo',
+    title: 'YomiFlow - Japonés a tu ritmo',
     description:
-      'Inmersi\u00f3n en japon\u00e9s y repetici\u00f3n espaciada, offline-first. Tu estudio se guarda localmente.',
+      'Inmersión en japonés y repetición espaciada, offline-first. Tu estudio se guarda localmente.',
     image: '/assets/yomiflow-og.svg',
     locale: 'es_ES',
   },
 };
 
+const canonicalOrigin = 'https://yomiflow.app';
+
 @Injectable({ providedIn: 'root' })
 export class SeoService {
   private readonly meta = inject(Meta);
   private readonly title = inject(Title);
+  private readonly router = inject(Router);
+  private readonly document = inject(DOCUMENT);
 
   update(language: string): void {
     const data = content[language] ?? content['en'];
-    const image = new URL(data.image, globalThis.location.origin).href;
+    const image = new URL(data.image, canonicalOrigin).href;
+    const canonical = new URL(this.router.url, canonicalOrigin);
+    canonical.search = '';
+    canonical.hash = '';
+    const canonicalUrl = canonical.href;
+
     this.title.setTitle(data.title);
     this.meta.updateTag({ name: 'description', content: data.description });
 
@@ -41,6 +52,7 @@ export class SeoService {
       'og:title': data.title,
       'og:description': data.description,
       'og:image': image,
+      'og:url': canonicalUrl,
       'og:type': 'website',
       'og:locale': data.locale,
     })) {
@@ -55,6 +67,13 @@ export class SeoService {
     })) {
       this.meta.updateTag({ name, content: value });
     }
+
+    let canonicalLink = this.document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = this.document.createElement('link');
+      canonicalLink.rel = 'canonical';
+      this.document.head.append(canonicalLink);
+    }
+    canonicalLink.href = canonicalUrl;
   }
 }
-
