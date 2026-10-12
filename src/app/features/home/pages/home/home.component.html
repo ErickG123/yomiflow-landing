@@ -10,7 +10,7 @@
         <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span
         >{{ 'home.hero.eyebrow' | transloco }}
       </p>
-      <h1 class="text-balance text-5xl font-semibold tracking-tight sm:text-7xl">
+      <h1 appScrollReveal class="text-balance text-5xl font-semibold tracking-tight sm:text-7xl">
         {{ 'home.hero.title' | transloco }}
         <span
           class="bg-gradient-to-r from-indigo-300 to-violet-400 bg-clip-text text-transparent"
@@ -87,7 +87,7 @@
       <p class="text-sm font-semibold uppercase tracking-[.2em] text-indigo-300">
         {{ 'home.features.eyebrow' | transloco }}
       </p>
-      <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+      <h2 appScrollReveal class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
         {{ 'home.features.title' | transloco }}
       </h2>
       <p class="mt-4 leading-7 text-zinc-400">{{ 'home.features.subtitle' | transloco }}</p>
@@ -96,6 +96,7 @@
       @for (feature of featureKeys; track feature) {
         <a
           [routerLink]="featureRoutes[feature]"
+          appScrollReveal
           class="block rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 transition hover:border-indigo-500/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400"
         >
           <div
@@ -201,13 +202,65 @@
     </div>
   </div>
 </section>
+<section class="border-b border-zinc-900 bg-zinc-900/20 px-6 py-24">
+  <div class="mx-auto max-w-6xl">
+    <header appScrollReveal class="mx-auto max-w-3xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">
+        {{ 'home.comparison.eyebrow' | transloco }}
+      </p>
+      <h2 appScrollReveal class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+        {{ 'home.comparison.title' | transloco }}
+      </h2>
+      <p class="mt-4 leading-7 text-zinc-400">{{ 'home.comparison.subtitle' | transloco }}</p>
+    </header>
+    <div class="mt-12 grid gap-4 lg:grid-cols-2">
+      <article appScrollReveal class="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-7 sm:p-8">
+        <h3 class="text-lg font-semibold text-zinc-300">
+          {{ 'home.comparison.old.title' | transloco }}
+        </h3>
+        <ul class="mt-6 space-y-4">
+          @for (item of comparisonPainKeys; track item) {
+            <li class="flex items-start gap-3 text-sm leading-6 text-zinc-400">
+              <span
+                aria-hidden="true"
+                class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-zinc-500"
+                >×</span
+              >
+              {{ 'home.comparison.old.items.' + item | transloco }}
+            </li>
+          }
+        </ul>
+      </article>
+      <article
+        appScrollReveal
+        class="rounded-2xl border border-indigo-500/30 bg-indigo-950/20 p-7 sm:p-8"
+      >
+        <h3 class="text-lg font-semibold text-indigo-200">
+          {{ 'home.comparison.yomi.title' | transloco }}
+        </h3>
+        <ul class="mt-6 space-y-4">
+          @for (item of comparisonBenefitKeys; track item) {
+            <li class="flex items-start gap-3 text-sm leading-6 text-zinc-200">
+              <span
+                aria-hidden="true"
+                class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-400/10 text-emerald-300"
+                >✓</span
+              >
+              {{ 'home.comparison.yomi.items.' + item | transloco }}
+            </li>
+          }
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
 <section class="px-6 py-24">
   <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:items-center">
     <div>
       <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">
         {{ 'home.insights.eyebrow' | transloco }}
       </p>
-      <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+      <h2 appScrollReveal class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
         {{ 'home.insights.title' | transloco }}
       </h2>
       <p class="mt-4 leading-7 text-zinc-400">{{ 'home.insights.subtitle' | transloco }}</p>
@@ -262,7 +315,7 @@
         <p class="text-sm font-semibold uppercase tracking-[.2em] text-indigo-300">
           {{ 'home.audio.eyebrow' | transloco }}
         </p>
-        <h2 class="mt-4 text-3xl font-semibold tracking-tight">
+        <h2 appScrollReveal class="mt-4 text-3xl font-semibold tracking-tight">
           {{ 'home.audio.title' | transloco }}
         </h2>
         <p class="mt-4 max-w-2xl leading-7 text-zinc-400">
@@ -296,12 +349,59 @@
     </div>
   </div>
 </section>
+<section id="pricing" class="border-y border-zinc-900 bg-zinc-900/20 px-6 py-24">
+  <div class="mx-auto max-w-5xl">
+    <header appScrollReveal class="mx-auto max-w-3xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-[.2em] text-indigo-300">
+        {{ 'pricing.eyebrow' | transloco }}
+      </p>
+      <h2 appScrollReveal class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+        {{ 'pricing.title' | transloco }}
+      </h2>
+      <p class="mt-4 leading-7 text-zinc-400">{{ 'pricing.description' | transloco }}</p>
+    </header>
+    <article
+      appScrollReveal
+      class="mx-auto mt-10 max-w-2xl rounded-3xl border border-indigo-400/30 bg-gradient-to-br from-indigo-950/60 to-zinc-900/80 p-8 sm:p-10"
+    >
+      <div class="flex flex-wrap items-start justify-between gap-5">
+        <div>
+          <p class="text-sm font-semibold text-indigo-200">{{ 'pricing.plan' | transloco }}</p>
+          <p class="mt-3 text-5xl font-semibold tracking-tight">
+            {{ 'pricing.price' | transloco }}
+          </p>
+          <p class="mt-2 text-sm text-zinc-400">{{ 'pricing.priceDetail' | transloco }}</p>
+        </div>
+        <span
+          class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-medium text-emerald-200"
+          >{{ 'pricing.badge' | transloco }}</span
+        >
+      </div>
+      <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+        @for (item of pricingFeatureKeys; track item) {
+          <li class="flex items-start gap-2 text-sm text-zinc-200">
+            <span aria-hidden="true" class="text-emerald-300">✓</span
+            >{{ 'pricing.features.' + item | transloco }}
+          </li>
+        }
+      </ul>
+      <a
+        routerLink="/download"
+        class="mt-8 inline-flex w-full justify-center rounded-xl bg-indigo-500 px-6 py-3.5 font-semibold text-white transition hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-300"
+        >{{ 'pricing.cta' | transloco }}</a
+      >
+      <p class="mt-4 text-center text-xs leading-5 text-zinc-500">
+        {{ 'pricing.note' | transloco }}
+      </p>
+    </article>
+  </div>
+</section>
 <section id="download" class="px-6 pb-28">
   <div class="mx-auto max-w-3xl text-center">
     <p class="text-sm font-semibold uppercase tracking-[.2em] text-indigo-300">
       {{ 'home.cta.eyebrow' | transloco }}
     </p>
-    <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">
+    <h2 appScrollReveal class="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">
       {{ 'home.cta.title' | transloco }}
     </h2>
     <p class="mx-auto mt-5 max-w-xl leading-7 text-zinc-400">

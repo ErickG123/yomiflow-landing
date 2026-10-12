@@ -1,0 +1,64 @@
+<section class="px-6 py-24 sm:py-32">
+  <div class="mx-auto max-w-5xl">
+    <header appScrollReveal class="mx-auto max-w-3xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-[.2em] text-indigo-300">
+        {{ 'pricing.eyebrow' | transloco }}
+      </p>
+      <h1 class="mt-5 text-4xl font-semibold tracking-tight sm:text-6xl">
+        {{ 'pricing.title' | transloco }}
+      </h1>
+      <p class="mt-5 text-lg leading-8 text-zinc-400">{{ 'pricing.description' | transloco }}</p>
+    </header>
+
+    <article
+      appScrollReveal
+      class="mx-auto mt-14 max-w-2xl rounded-3xl border border-indigo-400/30 bg-gradient-to-br from-indigo-950/60 to-zinc-900/80 p-8 shadow-2xl shadow-indigo-950/20 sm:p-10"
+    >
+      <div class="flex flex-wrap items-start justify-between gap-5">
+        <div>
+          <p class="text-sm font-semibold text-indigo-200">{{ 'pricing.plan' | transloco }}</p>
+          <p class="mt-3 text-5xl font-semibold tracking-tight">
+            {{ 'pricing.price' | transloco }}
+          </p>
+          <p class="mt-2 text-sm text-zinc-400">{{ 'pricing.priceDetail' | transloco }}</p>
+        </div>
+        <span
+          class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-medium text-emerald-200"
+        >
+          {{ 'pricing.badge' | transloco }}
+        </span>
+      </div>
+
+      <ul class="mt-9 space-y-4">
+        @for (item of includedFeatures; track item) {
+          <li class="flex items-start gap-3 text-sm text-zinc-200">
+            <svg
+              aria-hidden="true"
+              class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="m5 12 4 4L19 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            {{ 'pricing.features.' + item | transloco }}
+          </li>
+        }
+      </ul>
+
+      <a
+        routerLink="/download"
+        class="mt-9 inline-flex w-full items-center justify-center rounded-xl bg-indigo-500 px-6 py-3.5 font-semibold text-white transition hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-300"
+        >{{ 'pricing.cta' | transloco }}</a
+      >
+      <p class="mt-4 text-center text-xs leading-5 text-zinc-500">
+        {{ 'pricing.note' | transloco }}
+      </p>
+    </article>
+  </div>
+</section>

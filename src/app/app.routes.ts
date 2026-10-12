@@ -12,6 +12,11 @@ export const routes: Routes = [
       import('./features/download/download.component').then((m) => m.DownloadComponent),
   },
   {
+    path: 'pricing',
+    loadComponent: () =>
+      import('./features/pricing/pricing.component').then((m) => m.PricingComponent),
+  },
+  {
     path: 'features/notebook',
     data: { feature: 'notebook' },
     loadComponent: () =>

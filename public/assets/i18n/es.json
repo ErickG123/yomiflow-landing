@@ -96,6 +96,29 @@
       "subtitle": "Un conjunto de herramientas de escritorio para quienes buscan inmersión, estructura y autonomía en un solo lugar.",
       "button": "Descubre YomiFlow",
       "note": "App de escritorio · Offline-first · Tus datos permanecen locales"
+    },
+    "comparison": {
+      "eyebrow": "Una forma más sencilla de estudiar",
+      "title": "¿Por qué pasarte a YomiFlow?",
+      "subtitle": "Dedica menos tiempo a mantener herramientas y más tiempo a aprender japonés.",
+      "old": {
+        "title": "El método tradicional",
+        "items": {
+          "setup": "Configuración y mantenimiento complejos de Anki",
+          "extensions": "Un conjunto de extensiones como Yomichan y MorphMan",
+          "internet": "Herramientas y flujos que dependen de internet",
+          "scattered": "Datos de estudio repartidos entre aplicaciones desconectadas"
+        }
+      },
+      "yomi": {
+        "title": "Un espacio de estudio conectado",
+        "items": {
+          "unified": "Herramientas unificadas para leer, escuchar, tomar notas y repasar",
+          "fsrs": "Motor de planificación FSRS integrado",
+          "offline": "Datos offline-first almacenados en SQLite",
+          "notebook": "Cuaderno híbrido integrado"
+        }
+      }
     }
   },
   "download": {
@@ -339,5 +362,27 @@
   },
   "a11y": {
     "skipToContent": "Saltar al contenido principal"
+  },
+  "pricing": {
+    "eyebrow": "Sencillo y transparente",
+    "title": "Un espacio de japonés para todos.",
+    "description": "YomiFlow es gratuito y de código abierto. Explora el código, usa las herramientas y ayuda a definir lo que viene.",
+    "plan": "Gratis y de código abierto",
+    "price": "Gratis",
+    "priceDetail": "Uso gratuito con el código fuente disponible",
+    "badge": "Gratis para siempre",
+    "features": {
+      "workspace": "Espacio completo para estudiar japonés",
+      "offline": "Herramientas offline-first y datos locales en SQLite",
+      "openSource": "Proyecto de código abierto en GitHub",
+      "updates": "Mejoras creadas junto a la comunidad"
+    },
+    "cta": "Ver la página de descargas",
+    "note": "Los paquetes de vista previa aún no están disponibles; sigue el desarrollo en GitHub."
+  },
+  "community": {
+    "title": "Ayuda a dar forma al futuro del aprendizaje de japonés.",
+    "description": "Participa en el proyecto, sigue el desarrollo y comparte ideas con la comunidad de YomiFlow.",
+    "github": "Visita YomiFlow en GitHub"
   }
 }

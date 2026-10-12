@@ -96,6 +96,29 @@
       "subtitle": "A thoughtful desktop toolkit for learners who want immersion, structure and ownership in one place.",
       "button": "Explore YomiFlow",
       "note": "Desktop app · Offline-first · Your data stays local"
+    },
+    "comparison": {
+      "eyebrow": "A simpler way to study",
+      "title": "Why switch to YomiFlow?",
+      "subtitle": "Spend less time maintaining a stack of tools and more time learning Japanese.",
+      "old": {
+        "title": "The old setup",
+        "items": {
+          "setup": "Complex Anki setup and maintenance",
+          "extensions": "A patchwork of extensions like Yomichan and MorphMan",
+          "internet": "Tools and workflows that depend on an internet connection",
+          "scattered": "Study data spread across disconnected apps"
+        }
+      },
+      "yomi": {
+        "title": "One connected workspace",
+        "items": {
+          "unified": "A unified toolkit for reading, listening, notes and review",
+          "fsrs": "A native FSRS scheduling engine",
+          "offline": "Offline-first study data stored in SQLite",
+          "notebook": "An integrated hybrid notebook"
+        }
+      }
     }
   },
   "download": {
@@ -340,5 +363,27 @@
   },
   "a11y": {
     "skipToContent": "Skip to main content"
+  },
+  "pricing": {
+    "eyebrow": "Simple and transparent",
+    "title": "A Japanese workspace for everyone.",
+    "description": "YomiFlow is free and open source. Explore the code, use the tools and help shape what comes next.",
+    "plan": "Free & Open Source",
+    "price": "$0",
+    "priceDetail": "Free to use, with source code available",
+    "badge": "Free forever",
+    "features": {
+      "workspace": "The complete Japanese study workspace",
+      "offline": "Offline-first tools and local SQLite data",
+      "openSource": "Open-source project on GitHub",
+      "updates": "Improvements shaped with the community"
+    },
+    "cta": "Explore the download page",
+    "note": "Preview packages are not available yet; follow development on GitHub."
+  },
+  "community": {
+    "title": "Help shape the future of Japanese learning.",
+    "description": "Join the project, follow development and share ideas with the YomiFlow community.",
+    "github": "Visit YomiFlow on GitHub"
   }
 }
