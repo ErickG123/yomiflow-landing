@@ -1,0 +1,19 @@
+<div
+  class="flex aspect-video w-full animate-pulse flex-col items-center justify-center gap-4 rounded-xl border border-zinc-800 bg-zinc-900 p-6 text-center text-zinc-400"
+  role="img"
+  [attr.aria-label]="label()"
+>
+  @if (type() === 'video') {
+    <svg aria-hidden="true" class="h-12 w-12 text-indigo-300" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+      <path d="m10 8 6 4-6 4V8Z" fill="currentColor" />
+    </svg>
+  } @else {
+    <svg aria-hidden="true" class="h-12 w-12 text-violet-300" viewBox="0 0 24 24" fill="none">
+      <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5" />
+      <circle cx="8.5" cy="9" r="1.5" fill="currentColor" />
+      <path d="m4 17 5-5 3 3 2-2 6 5" stroke="currentColor" stroke-width="1.5" />
+    </svg>
+  }
+  <span class="text-sm font-medium">{{ label() }}</span>
+</div>
