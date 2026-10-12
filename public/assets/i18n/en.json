@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "features": "Features",
+    "download": "Download",
+    "getApp": "Get the app",
+    "language": "Choose language"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "A focused workspace for Japanese learners",
+      "title": "Japanese immersion,",
+      "highlight": "in your own flow.",
+      "subtitle": "Bring reading, listening, note-making and spaced repetition into one offline-first desktop app. Build a study practice that stays yours.",
+      "download": "Get YomiFlow",
+      "explore": "Explore the workspace",
+      "privacy": "Local-first by design. Your study data stays on your device."
+    },
+    "preview": {
+      "label": "YOUR STUDY WORKSPACE",
+      "title": "Today’s review",
+      "streak": "12 day streak",
+      "review": "RECALL IN CONTEXT",
+      "reading": "日本語を勉強しています。 · nihongo o benkyō shite imasu",
+      "again": "Again",
+      "good": "Good",
+      "easy": "Easy",
+      "activity": "STUDY RHYTHM",
+      "local": "A local history of your daily practice"
+    },
+    "features": {
+      "eyebrow": "One connected workflow",
+      "title": "Everything you need to stay in Japanese.",
+      "subtitle": "Move from understanding what you read to remembering what matters, with tools designed to work together.",
+      "items": {
+        "media": {
+          "title": "Read and watch with furigana",
+          "description": "Explore manga, video subtitles and NHK Easy with dictionary lookups, reading support and context ready for review."
+        },
+        "notebook": {
+          "title": "A notebook that understands Japanese",
+          "description": "Write in TipTap, inspect morphology and syntax, catch common particle mistakes, and estimate passage familiarity with offline MorphMan."
+        },
+        "shadowing": {
+          "title": "Listen, repeat, improve",
+          "description": "Practice shadowing with your own audio and native system text-to-speech, keeping listening close to active study."
+        },
+        "srs": {
+          "title": "Reviews tuned to memory",
+          "description": "FSRS and SM-2 scheduling work with relational decks in local SQLite, bringing vocabulary back when it is due."
+        },
+        "morphman": {
+          "title": "Know what you know",
+          "description": "Analyze vocabulary coverage and estimated retention against your local cards before you dive into a passage."
+        },
+        "kana": {
+          "title": "Build kana fluency",
+          "description": "Train hiragana and katakana with quick drills and character-level mastery tracking."
+        }
+      }
+    },
+    "insights": {
+      "eyebrow": "Progress with context",
+      "title": "See the practice behind your progress.",
+      "subtitle": "YomiFlow brings focus time, recall and consistency into view, so you can shape a sustainable study rhythm.",
+      "items": {
+        "dojo": "Kana Dojo drills with granular accuracy and speed tracking",
+        "pomodoro": "Global Pomodoro for reading, listening or review",
+        "heatmap": "Study heatmaps and upcoming review forecasts",
+        "jlpt": "JLPT coverage insights from N5 through N1"
+      },
+      "panel": {
+        "label": "RETENTION OUTLOOK",
+        "value": "A growing body of knowledge",
+        "trend": "On track",
+        "retention": "Estimated retention",
+        "jlpt": "JLPT coverage"
+      }
+    },
+    "audio": {
+      "eyebrow": "Your listening library",
+      "title": "Keep immersion within reach.",
+      "description": "Audio Vault organizes local listening into a persistent global player and queue. Search notes, cards and cached articles from one FTS5-powered OmniSearch.",
+      "tags": {
+        "vault": "Audio Vault",
+        "search": "FTS5 OmniSearch",
+        "offline": "Available offline"
+      }
+    },
+    "cta": {
+      "eyebrow": "Begin your next chapter",
+      "title": "Make Japanese part of your everyday flow.",
+      "subtitle": "A thoughtful desktop toolkit for learners who want immersion, structure and ownership in one place.",
+      "button": "Explore YomiFlow",
+      "note": "Desktop app · Offline-first · Your data stays local"
+    }
+  },
+  "footer": {
+    "year": "2026",
+    "rights": "All rights reserved.",
+    "tagline": "Offline-first Japanese immersion."
+  }
+}

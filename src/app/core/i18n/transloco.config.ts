@@ -1,0 +1,21 @@
+import { inject, Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslocoLoader } from '@jsverse/transloco';
+
+@Injectable({ providedIn: 'root' })
+export class TranslocoHttpLoader implements TranslocoLoader {
+  private readonly http = inject(HttpClient);
+  getTranslation(lang: string) {
+    return this.http.get<Record<string, unknown>>(`/assets/i18n/${lang}.json`);
+  }
+}
+export const translocoConfig = {
+  config: {
+    availableLangs: ['en', 'pt', 'es'],
+    defaultLang: 'en',
+    fallbackLang: 'en',
+    reRenderOnLangChange: true,
+    prodMode: false,
+  },
+  loader: TranslocoHttpLoader,
+};

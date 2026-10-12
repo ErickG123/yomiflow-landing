@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "features": "Recursos",
+    "download": "Download",
+    "getApp": "Conheça o app",
+    "language": "Escolher idioma"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Um espaço de estudo focado em japonês",
+      "title": "Imersão em japonês,",
+      "highlight": "no seu ritmo.",
+      "subtitle": "Reúna leitura, escuta, anotações e repetição espaçada em um só app desktop offline-first. Construa uma rotina de estudos que continua sendo sua.",
+      "download": "Baixar o YomiFlow",
+      "explore": "Conheça o espaço de estudo",
+      "privacy": "Local por princípio. Seus dados de estudo ficam no seu dispositivo."
+    },
+    "preview": {
+      "label": "SEU ESPAÇO DE ESTUDO",
+      "title": "Revisões de hoje",
+      "streak": "12 dias seguidos",
+      "review": "RECORDE NO CONTEXTO",
+      "reading": "日本語を勉強しています。 · nihongo o benkyō shite imasu",
+      "again": "De novo",
+      "good": "Bom",
+      "easy": "Fácil",
+      "activity": "RITMO DE ESTUDO",
+      "local": "Um histórico local da sua prática diária"
+    },
+    "features": {
+      "eyebrow": "Um fluxo conectado",
+      "title": "Tudo para continuar em contato com o japonês.",
+      "subtitle": "Passe da compreensão do que você lê à retenção do que importa, com ferramentas que trabalham em conjunto.",
+      "items": {
+        "media": {
+          "title": "Leia e assista com furigana",
+          "description": "Explore mangá, legendas de vídeo e NHK Easy com busca no dicionário, apoio de leitura e contexto pronto para revisão."
+        },
+        "notebook": {
+          "title": "Um caderno que entende japonês",
+          "description": "Escreva no TipTap, analise morfologia e sintaxe, encontre erros comuns de partículas e estime sua familiaridade com textos usando MorphMan offline."
+        },
+        "shadowing": {
+          "title": "Escute, repita, aprimore",
+          "description": "Pratique shadowing com seus áudios e síntese de voz nativa do sistema, aproximando a escuta do estudo ativo."
+        },
+        "srs": {
+          "title": "Revisões no tempo da memória",
+          "description": "O agendamento FSRS e SM-2 funciona com baralhos relacionais no SQLite local e ajuda a rever vocabulário na hora certa."
+        },
+        "morphman": {
+          "title": "Saiba o que você já conhece",
+          "description": "Analise a cobertura de vocabulário e a retenção estimada com base nos seus cartões locais antes de mergulhar em um texto."
+        },
+        "kana": {
+          "title": "Ganhe fluência em kana",
+          "description": "Pratique hiragana e katakana com exercícios rápidos e acompanhamento de domínio por caractere."
+        }
+      }
+    },
+    "insights": {
+      "eyebrow": "Progresso com contexto",
+      "title": "Enxergue a prática por trás do progresso.",
+      "subtitle": "O YomiFlow reúne tempo de foco, recordação e consistência para ajudar você a construir um ritmo de estudo sustentável.",
+      "items": {
+        "dojo": "Exercícios do Kana Dojo com precisão e velocidade detalhadas",
+        "pomodoro": "Pomodoro global para leitura, escuta ou revisão",
+        "heatmap": "Mapas de estudo e previsões de próximas revisões",
+        "jlpt": "Indicadores de cobertura JLPT do N5 ao N1"
+      },
+      "panel": {
+        "label": "PERSPECTIVA DE RETENÇÃO",
+        "value": "Conhecimento em construção",
+        "trend": "No caminho",
+        "retention": "Retenção estimada",
+        "jlpt": "Cobertura JLPT"
+      }
+    },
+    "audio": {
+      "eyebrow": "Sua biblioteca de escuta",
+      "title": "Deixe a imersão sempre por perto.",
+      "description": "O Audio Vault organiza sua escuta local em um reprodutor global persistente e fila. Busque notas, cartões e artigos salvos em uma OmniSearch com FTS5.",
+      "tags": {
+        "vault": "Audio Vault",
+        "search": "OmniSearch FTS5",
+        "offline": "Disponível offline"
+      }
+    },
+    "cta": {
+      "eyebrow": "Comece o próximo capítulo",
+      "title": "Leve o japonês para o seu dia a dia.",
+      "subtitle": "Um conjunto de ferramentas desktop para quem busca imersão, estrutura e autonomia em um só lugar.",
+      "button": "Conheça o YomiFlow",
+      "note": "App desktop · Offline-first · Seus dados ficam locais"
+    }
+  },
+  "footer": {
+    "year": "2026",
+    "rights": "Todos os direitos reservados.",
+    "tagline": "Imersão em japonês offline-first."
+  }
+}
