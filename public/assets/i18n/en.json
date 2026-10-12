@@ -99,38 +99,231 @@
     }
   },
   "download": {
-    "eyebrow": "Desktop app",
-    "title": "Your Japanese workspace is almost here.",
-    "description": "Download options for Windows, macOS and Linux will be available here soon. YomiFlow keeps your study library on your device."
+    "eyebrow": "The desktop app",
+    "title": "A focused Japanese workspace, ready for your desktop.",
+    "description": "Choose your platform and explore what is shipping in the YomiFlow desktop app.",
+    "versionLabel": "Preview version",
+    "version": "v1.0.0-beta",
+    "simulated": "Installer downloads will be enabled when public release builds are available.",
+    "platforms": {
+      "windows": {
+        "name": "Windows",
+        "formats": ".exe and .msi packages",
+        "button": "Download for Windows"
+      },
+      "macos": {
+        "name": "macOS",
+        "formats": ".dmg package",
+        "button": "Download for macOS"
+      },
+      "linux": {
+        "name": "Linux",
+        "formats": ".AppImage and .deb packages",
+        "button": "Download for Linux"
+      }
+    },
+    "requirements": {
+      "eyebrow": "Designed to stay lightweight",
+      "title": "System requirements",
+      "description": "YomiFlow combines a Tauri desktop shell, Rust services and local SQLite storage. Core study data stays on your device; no hosted database is required.",
+      "local": {
+        "title": "Local-first core",
+        "description": "The reader, notebook and review history use local storage. SQLite runs in WAL mode for responsive local reads and writes."
+      },
+      "platform": {
+        "title": "Platform webviews",
+        "description": "Windows builds use WebView2; macOS uses its native WebKit webview. Linux packaging targets WebKitGTK 4.1, with distro dependencies depending on the package."
+      },
+      "storage": {
+        "title": "Your library sets storage needs",
+        "description": "There is no published fixed memory or disk minimum yet. Imported audio, video, archives and optional OCR assets determine additional storage and compute needs."
+      }
+    },
+    "releases": {
+      "eyebrow": "From the latest development updates",
+      "title": "Recent release notes",
+      "version": "Latest repository updates",
+      "disclaimer": "These are recent implementation notes from the desktop repository. The displayed installer version is a preview label; packages are not yet downloadable.",
+      "items": {
+        "audioVault": {
+          "title": "Audio Vault folder import",
+          "description": "Import folders recursively, read available ID3 metadata with filename fallbacks, add tracks to the local library and optionally queue them in sorted order."
+        },
+        "shadowingMorphman": {
+          "title": "More resilient study flow",
+          "description": "Shadowing now reports speech-recognition network errors clearly, and unfamiliar MorphMan terms can flow into SRS card creation."
+        },
+        "notebook": {
+          "title": "Richer notebook editing",
+          "description": "Notebook editing preserves HTML formatting, adds full table support and lets learners delete notes."
+        }
+      }
+    }
   },
   "deepDive": {
-    "eyebrow": "A closer look",
+    "eyebrow": "Explore the workflow",
     "mediaLabel": "Feature showcase video",
     "notebook": {
-      "title": "A notebook built for understanding Japanese",
-      "description": "Turn reading into a connected study practice with rich notes, linguistic analysis and tools that help you see what you already know.",
+      "title": "A Japanese notebook that helps you see how sentences work.",
+      "description": "Write, analyze and connect study notes in a TipTap workspace with local Japanese language tools powered by Rust and Lindera.",
+      "mediaLabel": "Notebook and Japanese language analysis feature video",
       "benefits": {
-        "first": "Write naturally in a TipTap-powered editor and keep notes alongside your study materials.",
-        "second": "Explore syntax trees and morphology to understand how each sentence works.",
-        "third": "Use the linter and MorphMan estimates to refine notes and choose your next reading."
+        "first": {
+          "title": "TipTap notes with Markdown flow",
+          "description": "Use rich-text blocks, Markdown editing, slash commands, split-screen study and autosaving to keep notes close to the material."
+        },
+        "second": {
+          "title": "Lindera morphology",
+          "description": "The Rust backend tokenizes Japanese with its bundled IPADIC dictionary and highlights parts of speech in the editor."
+        },
+        "third": {
+          "title": "Bunsetsu syntax tree",
+          "description": "Generate a dependency view that groups morphemes into Bunsetsu units and visualizes sentence relationships."
+        },
+        "fourth": {
+          "title": "Grammar checks and linked notes",
+          "description": "A local heuristic flags a documented particle pattern with a one-click suggestion; [[note]] links connect related notebook entries."
+        }
       }
     },
     "audioVault": {
-      "title": "Your listening library, always within reach",
+      "title": "Your listening library, always within reach.",
       "description": "Audio Vault brings local audio, a persistent player and queue together, while OmniSearch makes your growing library easy to revisit.",
+      "mediaLabel": "Audio Vault feature video",
       "benefits": {
-        "first": "Keep a global player and queue available as you move between study activities.",
-        "second": "Save listening materials locally and continue learning offline.",
-        "third": "Search notes, cards and cached content with SQLite FTS5."
+        "first": {
+          "title": "A persistent global player",
+          "description": "Playback and queue stay available as you move between study activities."
+        },
+        "second": {
+          "title": "Import a local music library",
+          "description": "Scan folders recursively and read ID3 metadata, with filename and folder fallbacks when tags are missing."
+        },
+        "third": {
+          "title": "Listening history stays local",
+          "description": "Track listened milliseconds per session in SQLite and revisit your imported audio library."
+        },
+        "fourth": {
+          "title": "Search across your study data",
+          "description": "Find cards, notebook notes and cached NHK articles with the SQLite FTS5 OmniSearch."
+        }
       }
     },
     "immersion": {
-      "title": "Learn from the Japanese you love",
-      "description": "Bring manga, video subtitles and articles into one offline-first reading flow, with dynamic furigana and quick access to vocabulary.",
+      "title": "Read and watch Japanese with context in reach.",
+      "description": "Bring manga, local video and NHK Web Easy into one reading flow, with dictionary lookups and a path from immersion to review.",
+      "mediaLabel": "Japanese immersion feature video",
       "benefits": {
-        "first": "Adjust furigana dynamically to match your reading level.",
-        "second": "Look up words without losing the sentence and media context.",
-        "third": "Send useful vocabulary into spaced repetition for lasting recall."
+        "first": {
+          "title": "Manga, without unpacking archives",
+          "description": "Open CBZ, ZIP, CBR and RAR collections directly from memory and select speech bubbles for local MangaOCR inference with ONNX Runtime."
+        },
+        "second": {
+          "title": "Video subtitles made studyable",
+          "description": "Play local MKV and MP4 video, inspect embedded subtitles, and extract contextual audio clips and screenshots for richer flashcards with FFmpeg."
+        },
+        "third": {
+          "title": "NHK Web Easy, kept nearby",
+          "description": "Cache articles and native audio in SQLite for local reading with morphological hover breakdowns."
+        },
+        "fourth": {
+          "title": "From a word to a review",
+          "description": "Look up vocabulary in the media context and carry useful discoveries into your spaced-repetition decks."
+        }
+      }
+    },
+    "downloadNow": "Download YomiFlow",
+    "benefitsEyebrow": "Built for real study sessions",
+    "shadowing": {
+      "title": "Listen, repeat and compare your Japanese aloud.",
+      "description": "Practice with your own audio, system-provided Japanese speech synthesis and microphone transcription when your browser supports Web Speech API.",
+      "mediaLabel": "Japanese shadowing practice feature video",
+      "benefits": {
+        "first": {
+          "title": "Bring your own listening material",
+          "description": "Load a local audio file into a focused shadowing session and replay it while practicing."
+        },
+        "second": {
+          "title": "System voice playback",
+          "description": "Ask the host browser or operating system for a ja-JP speech voice. Available voices and offline behavior depend on that platform."
+        },
+        "third": {
+          "title": "Microphone transcription",
+          "description": "The trainer requests Japanese speech recognition through Web Speech API; browser support and network requirements vary."
+        },
+        "fourth": {
+          "title": "Useful feedback after a take",
+          "description": "Compare recognized text with the target and get a character-level similarity score to guide another attempt."
+        }
+      }
+    },
+    "srs": {
+      "title": "Review with a scheduler and a library that work together.",
+      "description": "YomiFlow combines FSRS and SM-2 scheduling with relational SQLite decks, review history and an interleaved study queue.",
+      "mediaLabel": "Spaced repetition review feature video",
+      "benefits": {
+        "first": {
+          "title": "FSRS and SM-2 scheduling",
+          "description": "Pure domain models track stability and difficulty to schedule vocabulary recall across your study decks."
+        },
+        "second": {
+          "title": "Relational SQLite data",
+          "description": "Cards connect to dictionary entries, decks, tags and review logs with foreign-key integrity and cascading cleanup."
+        },
+        "third": {
+          "title": "One interleaved review queue",
+          "description": "Mix vocabulary with image-occlusion cards, grammar notes and Kana prompts rather than staying in one exercise type."
+        },
+        "fourth": {
+          "title": "Make visual details recallable",
+          "description": "Mask areas of local images and reveal them during review, then schedule recall with the existing FSRS ratings."
+        }
+      }
+    },
+    "analytics": {
+      "title": "Know what a passage asks of you before you dive in.",
+      "description": "Use local vocabulary coverage, retention estimates and study history to understand what you know and plan what comes next.",
+      "mediaLabel": "MorphMan and study analytics feature video",
+      "benefits": {
+        "first": {
+          "title": "Offline MorphMan estimates",
+          "description": "Lindera lemmas are compared with your SQLite vocabulary cards to estimate known-word coverage and highlight unfamiliar occurrences."
+        },
+        "second": {
+          "title": "Coverage and retention, separated",
+          "description": "See comprehension coverage alongside a distinct FSRS-based retrievability estimate for terms with cards."
+        },
+        "third": {
+          "title": "JLPT coverage from N5 to N1",
+          "description": "Compare your local dictionary and card corpus with JLPT vocabulary levels."
+        },
+        "fourth": {
+          "title": "History and what is due next",
+          "description": "Review GitHub-style 16-week study heatmaps and upcoming review forecasts, with completed focus sessions tracked locally."
+        }
+      }
+    },
+    "kana": {
+      "title": "Build kana fluency one character at a time.",
+      "description": "Kana Dojo turns Hiragana and Katakana practice into short recall drills with accuracy and speed tracked per character.",
+      "mediaLabel": "Kana Dojo practice feature video",
+      "benefits": {
+        "first": {
+          "title": "Choose your character set",
+          "description": "Practice Hiragana, Katakana or both, selecting base kana, Dakuon/Handakuon and Yoon combinations."
+        },
+        "second": {
+          "title": "Fast recall drills",
+          "description": "See a kana prompt and answer in romaji, with a new prompt ready for another focused repetition."
+        },
+        "third": {
+          "title": "Character-level mastery",
+          "description": "SQLite records attempts and correctness for each character, including accuracy and response speed."
+        },
+        "fourth": {
+          "title": "Join the mixed review queue",
+          "description": "Kana prompts can be interleaved with vocabulary, grammar and image-occlusion reviews."
+        }
       }
     }
   },

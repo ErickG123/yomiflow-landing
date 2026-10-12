@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { TranslocoModule } from '@jsverse/transloco';
+import { DownloadPlatform, ReleaseNoteKey } from './models/download.model';
 
 @Component({
   selector: 'app-download',
@@ -8,4 +9,12 @@ import { TranslocoModule } from '@jsverse/transloco';
   templateUrl: './download.component.html',
   styleUrl: './download.component.scss',
 })
-export class DownloadComponent {}
+export class DownloadComponent {
+  readonly platforms: DownloadPlatform[] = ['windows', 'macos', 'linux'];
+  readonly releaseNotes: ReleaseNoteKey[] = ['audioVault', 'shadowingMorphman', 'notebook'];
+  readonly activeDownload = signal<DownloadPlatform | null>(null);
+
+  simulateDownload(platform: DownloadPlatform): void {
+    this.activeDownload.set(platform);
+  }
+}

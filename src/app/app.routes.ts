@@ -36,6 +36,38 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'features/shadowing',
+    data: { feature: 'shadowing' },
+    loadComponent: () =>
+      import('./features/feature-detail/feature-detail.component').then(
+        (m) => m.FeatureDetailComponent,
+      ),
+  },
+  {
+    path: 'features/srs',
+    data: { feature: 'srs' },
+    loadComponent: () =>
+      import('./features/feature-detail/feature-detail.component').then(
+        (m) => m.FeatureDetailComponent,
+      ),
+  },
+  {
+    path: 'features/analytics',
+    data: { feature: 'analytics' },
+    loadComponent: () =>
+      import('./features/feature-detail/feature-detail.component').then(
+        (m) => m.FeatureDetailComponent,
+      ),
+  },
+  {
+    path: 'features/kana',
+    data: { feature: 'kana' },
+    loadComponent: () =>
+      import('./features/feature-detail/feature-detail.component').then(
+        (m) => m.FeatureDetailComponent,
+      ),
+  },
+  {
     path: 'about',
     loadComponent: () => import('./features/about/about.component').then((m) => m.AboutComponent),
   },

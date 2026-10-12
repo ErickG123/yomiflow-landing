@@ -99,38 +99,230 @@
     }
   },
   "download": {
-    "eyebrow": "Aplicación de escritorio",
-    "title": "Tu espacio de estudio de japonés está casi aquí.",
-    "description": "Pronto encontrarás aquí las opciones de descarga para Windows, macOS y Linux. YomiFlow mantiene tu biblioteca de estudio en tu dispositivo."
+    "eyebrow": "PRÓXIMAMENTE",
+    "title": "Tu espacio de japonés, listo para el escritorio.",
+    "description": "Elige tu plataforma para seguir el lanzamiento de YomiFlow. Los paquetes que aparecen abajo son demostrativos mientras preparamos la primera versión pública.",
+    "versionLabel": "Versión",
+    "version": "v1.0.0-beta",
+    "simulated": "La descarga estará disponible cuando se publique la versión.",
+    "platforms": {
+      "windows": {
+        "name": "Windows",
+        "formats": ".exe / .msi",
+        "button": "Descargar para Windows"
+      },
+      "macos": {
+        "name": "macOS",
+        "formats": ".dmg",
+        "button": "Descargar para macOS"
+      },
+      "linux": {
+        "name": "Linux",
+        "formats": ".AppImage / .deb",
+        "button": "Descargar para Linux"
+      }
+    },
+    "requirements": {
+      "eyebrow": "LIGERO POR DISEÑO",
+      "title": "Requisitos del sistema",
+      "description": "YomiFlow está diseñado para mantener tu espacio de estudio local y ágil. SQLite, Tauri y Rust respaldan una arquitectura offline-first sin depender de una aplicación web pesada.",
+      "local": {
+        "title": "Datos locales",
+        "description": "Tu contenido de estudio se guarda en una base SQLite relacional en el dispositivo."
+      },
+      "platform": {
+        "title": "Aplicación de escritorio",
+        "description": "La interfaz ligera de Tauri conecta servicios nativos escritos en Rust."
+      },
+      "storage": {
+        "title": "Almacenamiento flexible",
+        "description": "Los medios importados ocupan espacio según tu biblioteca. Reserva almacenamiento local para tus archivos."
+      }
+    },
+    "releases": {
+      "eyebrow": "AVANCES DEL PRODUCTO",
+      "title": "Notas de versión",
+      "version": "Implementación reciente",
+      "disclaimer": "Notas basadas en implementaciones recientes del repositorio de escritorio; la disponibilidad puede variar según la versión.",
+      "items": {
+        "audioVault": {
+          "title": "Importación de carpetas en Audio Vault",
+          "description": "Se añadió la importación de directorios para organizar álbumes y podcasts en la biblioteca de audio."
+        },
+        "shadowingMorphman": {
+          "title": "Shadowing más robusto y flujo MorphMan",
+          "description": "Gestión de errores de red en Shadowing y conexión de palabras MorphMan con la creación de tarjetas SRS."
+        },
+        "notebook": {
+          "title": "Notebook: tablas y edición conservada",
+          "description": "Se conserva el formato HTML, se añade compatibilidad completa con tablas y la opción de eliminar notas."
+        }
+      }
+    }
   },
   "deepDive": {
-    "eyebrow": "Más de cerca",
-    "mediaLabel": "Vídeo de presentación de la función",
-    "notebook": {
-      "title": "Un cuaderno para comprender el japonés",
-      "description": "Convierte la lectura en una práctica de estudio conectada con notas completas, análisis lingüístico y herramientas para descubrir lo que ya sabes.",
+    "eyebrow": "EXPLORA YOMIFLOW",
+    "downloadNow": "Descargar YomiFlow",
+    "benefitsEyebrow": "DISEÑADO PARA UN FLUJO DE ESTUDIO CONECTADO",
+    "immersion": {
+      "title": "Lee y mira con furigana.",
+      "description": "Integra manga, vídeos y artículos de NHK Web Easy en una rutina de inmersión con herramientas de lectura y consulta.",
+      "mediaLabel": "Demostración de lectura inmersiva",
       "benefits": {
-        "first": "Escribe con naturalidad en el editor TipTap y conserva tus notas junto a tus materiales.",
-        "second": "Explora árboles sintácticos y morfología para entender cómo funciona cada frase.",
-        "third": "Usa el linter y las estimaciones de MorphMan para mejorar tus notas y elegir la próxima lectura."
+        "first": {
+          "title": "Manga de tu biblioteca",
+          "description": "Abre archivos CBZ, ZIP, CBR y RAR localmente y consulta bocadillos con MangaOCR en el dispositivo."
+        },
+        "second": {
+          "title": "Vídeos con subtítulos",
+          "description": "Reproduce vídeos locales, usa subtítulos integrados y extrae audio o capturas con FFmpeg."
+        },
+        "third": {
+          "title": "NHK Web Easy",
+          "description": "Guarda artículos y audio para consultarlos sin conexión y explora vocabulario con análisis morfológico."
+        },
+        "fourth": {
+          "title": "Lectura asistida",
+          "description": "Consulta palabras y lecturas mientras mantienes el material dentro de tu flujo de inmersión."
+        }
+      }
+    },
+    "notebook": {
+      "title": "Un cuaderno que entiende japonés.",
+      "description": "Escribe en un editor TipTap con soporte Markdown y herramientas lingüísticas para explorar la estructura del japonés.",
+      "mediaLabel": "Demostración de Notebook",
+      "benefits": {
+        "first": {
+          "title": "Editor para tus ideas",
+          "description": "Usa edición enriquecida con TipTap, comandos slash, vista dividida y guardado automático."
+        },
+        "second": {
+          "title": "Árbol sintáctico",
+          "description": "El análisis morfológico con Rust y Lindera/IPADIC organiza el texto en unidades y relaciones gramaticales."
+        },
+        "third": {
+          "title": "Linter gramatical",
+          "description": "Recibe comprobaciones heurísticas para patrones de partículas documentados en el proyecto."
+        },
+        "fourth": {
+          "title": "Notas conectadas",
+          "description": "Enlaza notas con referencias [[nota]] y navega por conexiones bidireccionales."
+        }
+      }
+    },
+    "shadowing": {
+      "title": "Escucha, repite y practica.",
+      "description": "Usa audio y síntesis de voz japonesa para practicar pronunciación. Las voces y el reconocimiento disponibles dependen del navegador y la plataforma.",
+      "mediaLabel": "Demostración de Shadowing",
+      "benefits": {
+        "first": {
+          "title": "Síntesis de voz japonesa",
+          "description": "El servicio usa voces ja-JP disponibles mediante SpeechSynthesis en el entorno del usuario."
+        },
+        "second": {
+          "title": "Practica con tus medios",
+          "description": "Usa audio de estudio y practica fragmentos a tu propio ritmo."
+        },
+        "third": {
+          "title": "Reconocimiento de voz",
+          "description": "La captura y el reconocimiento usan funciones Web Speech del navegador; pueden requerir red o no estar disponibles."
+        },
+        "fourth": {
+          "title": "Adaptado al entorno",
+          "description": "La gestión de errores de red aclara cuándo no se puede usar una función de voz."
+        }
+      }
+    },
+    "srs": {
+      "title": "Repasos adaptados a la memoria.",
+      "description": "Repasa tarjetas con planificación FSRS y datos relacionales locales, conservando tu historial de estudio en el dispositivo.",
+      "mediaLabel": "Demostración de repasos SRS",
+      "benefits": {
+        "first": {
+          "title": "Planificación FSRS",
+          "description": "Usa FSRS para programar repasos espaciados, con soporte también para el algoritmo SM-2."
+        },
+        "second": {
+          "title": "SQLite relacional",
+          "description": "Los mazos, tarjetas, etiquetas y registros de repaso se mantienen en relaciones locales."
+        },
+        "third": {
+          "title": "Cola intercalada",
+          "description": "Combina vocabulario, gramática, kana y ejercicios de oclusión de imágenes en una cola de estudio."
+        },
+        "fourth": {
+          "title": "Historial coherente",
+          "description": "Las referencias y eliminaciones en cascada ayudan a mantener organizados los datos relacionados."
+        }
+      }
+    },
+    "analytics": {
+      "title": "Descubre lo que ya sabes.",
+      "description": "Consulta la cobertura de vocabulario, la retención y tu ritmo de estudio con análisis calculados localmente.",
+      "mediaLabel": "Demostración de analíticas",
+      "benefits": {
+        "first": {
+          "title": "Cobertura MorphMan",
+          "description": "Lindera compara lemas del texto con tarjetas de vocabulario guardadas en SQLite."
+        },
+        "second": {
+          "title": "Contexto JLPT",
+          "description": "Explora estimaciones de cobertura de N5 a N1 y previsiones de repasos."
+        },
+        "third": {
+          "title": "Mapas de actividad",
+          "description": "Visualiza actividad durante 16 semanas y sesiones Pomodoro completadas."
+        },
+        "fourth": {
+          "title": "Cobertura y retención",
+          "description": "Consulta por separado el vocabulario reconocido y las estimaciones de retención FSRS."
+        }
+      }
+    },
+    "kana": {
+      "title": "Gana fluidez con kana.",
+      "description": "Practica hiragana y katakana con ejercicios y seguimiento local de precisión y velocidad.",
+      "mediaLabel": "Demostración de Kana Dojo",
+      "benefits": {
+        "first": {
+          "title": "Hiragana y katakana",
+          "description": "Entrena los dos silabarios con sesiones centradas en el reconocimiento."
+        },
+        "second": {
+          "title": "Más allá de las formas básicas",
+          "description": "Incluye kana base, dakuten, handakuten y combinaciones yōon."
+        },
+        "third": {
+          "title": "Progreso por carácter",
+          "description": "Consulta la precisión y velocidad registradas para cada kana."
+        },
+        "fourth": {
+          "title": "Práctica persistente",
+          "description": "El progreso del Dojo se conserva localmente en SQLite."
+        }
       }
     },
     "audioVault": {
-      "title": "Tu biblioteca de audio siempre a mano",
-      "description": "Audio Vault reúne audio local, un reproductor persistente y una cola, mientras OmniSearch facilita volver a tu biblioteca.",
+      "title": "Tu biblioteca de audio",
+      "description": "Organiza álbumes y podcasts en una biblioteca de audio local.",
+      "mediaLabel": "Demostración de Audio Vault",
       "benefits": {
-        "first": "Mantén un reproductor y una cola globales al cambiar entre actividades de estudio.",
-        "second": "Guarda materiales de escucha localmente y sigue aprendiendo sin conexión.",
-        "third": "Busca notas, tarjetas y contenido en caché con SQLite FTS5."
-      }
-    },
-    "immersion": {
-      "title": "Aprende con el japonés que te gusta",
-      "description": "Reúne manga, subtítulos de vídeo y artículos en un flujo de lectura offline-first, con furigana dinámico y acceso rápido al vocabulario.",
-      "benefits": {
-        "first": "Ajusta el furigana dinámicamente a tu nivel de lectura.",
-        "second": "Consulta palabras sin perder el contexto de la frase y del contenido.",
-        "third": "Envía vocabulario útil a la repetición espaciada para recordarlo durante más tiempo."
+        "first": {
+          "title": "Importación de directorios",
+          "description": "Añade carpetas de álbumes y podcasts a tu biblioteca."
+        },
+        "second": {
+          "title": "Biblioteca local",
+          "description": "Mantén tus materiales de audio organizados en el dispositivo."
+        },
+        "third": {
+          "title": "Practica escuchando",
+          "description": "Accede a tu contenido de audio desde tu espacio de estudio."
+        },
+        "fourth": {
+          "title": "Pensado para estudiar",
+          "description": "Conecta el audio con tus rutinas de japonés."
+        }
       }
     }
   },

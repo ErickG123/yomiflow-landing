@@ -15,10 +15,10 @@ export class HomeComponent {
   readonly featureRoutes: Record<string, string> = {
     media: '/features/immersion',
     notebook: '/features/notebook',
-    shadowing: '/features/audio-vault',
-    srs: '/features/notebook',
-    morphman: '/features/immersion',
-    kana: '/features/immersion',
+    shadowing: '/features/shadowing',
+    srs: '/features/srs',
+    morphman: '/features/analytics',
+    kana: '/features/kana',
   };
   readonly insightKeys = ['dojo', 'pomodoro', 'heatmap', 'jlpt'];
   scrollToFeatures(): void {
