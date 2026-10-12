@@ -1,9 +1,9 @@
 <label class="sr-only" for="language">{{ 'nav.language' | transloco }}</label
 ><select
   id="language"
-  class="cursor-pointer rounded-lg border border-zinc-800 bg-zinc-950 px-2.5 py-2 text-xs text-zinc-300 outline-none focus:border-indigo-500"
+  class="cursor-pointer rounded-lg border border-zinc-800 bg-zinc-950 px-2.5 py-2 text-xs text-zinc-300 focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
   [value]="currentLanguage"
-  (change)="changeLanguage($any($event.target).value)"
+  (change)="changeLanguage($event)"
 >
   <option value="en">EN</option>
   <option value="pt">PT</option>

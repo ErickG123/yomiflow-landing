@@ -1,6 +1,7 @@
 ﻿import { Component, inject } from '@angular/core';
-import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
+import { TranslocoModule } from '@jsverse/transloco';
 import { SupportedLanguage } from '../../../core/i18n/models/language.model';
+import { LanguageService } from '../../../core/i18n/services/language.service';
 
 @Component({
   selector: 'app-language-switcher',
@@ -9,11 +10,12 @@ import { SupportedLanguage } from '../../../core/i18n/models/language.model';
   templateUrl: './language-switcher.component.html',
 })
 export class LanguageSwitcherComponent {
-  private readonly transloco = inject(TranslocoService);
+  private readonly languages = inject(LanguageService);
   get currentLanguage(): SupportedLanguage {
-    return this.transloco.getActiveLang() as SupportedLanguage;
+    return this.languages.currentLanguage;
   }
-  changeLanguage(language: string): void {
-    this.transloco.setActiveLang(language);
+  changeLanguage(event: Event): void {
+    const language = (event.currentTarget as HTMLSelectElement).value as SupportedLanguage;
+    this.languages.setLanguage(language);
   }
 }
