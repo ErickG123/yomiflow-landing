@@ -4,7 +4,8 @@
     "download": "Descarga",
     "getApp": "Conoce la app",
     "language": "Elegir idioma",
-    "about": "Acerca de"
+    "about": "Acerca de",
+    "ariaLabel": "Navegaci?n principal"
   },
   "home": {
     "hero": {
@@ -143,5 +144,8 @@
     "year": "2026",
     "rights": "Todos los derechos reservados.",
     "tagline": "Inmersión en japonés offline-first."
+  },
+  "a11y": {
+    "skipToContent": "Saltar al contenido principal"
   }
 }

@@ -4,7 +4,8 @@
     "download": "Download",
     "getApp": "Get the app",
     "language": "Choose language",
-    "about": "About"
+    "about": "About",
+    "ariaLabel": "Primary navigation"
   },
   "home": {
     "hero": {
@@ -143,5 +144,8 @@
     "year": "2026",
     "rights": "All rights reserved.",
     "tagline": "Offline-first Japanese immersion."
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content"
   }
 }

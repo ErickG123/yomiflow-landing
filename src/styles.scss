@@ -44,3 +44,13 @@ body {
 ::selection {
   background: rgb(99 102 241 / 0.35);
 }
+
+@layer base {
+  :focus-visible {
+    @apply outline-none ring-2 ring-indigo-500 ring-offset-2 ring-offset-zinc-950;
+  }
+}
+
+.skip-link {
+  @apply fixed left-4 top-4 z-50 -translate-y-20 rounded-lg bg-indigo-500 px-4 py-3 font-semibold text-white transition-transform focus-visible:translate-y-0;
+}
