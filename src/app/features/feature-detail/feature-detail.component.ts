@@ -9,6 +9,7 @@ import { MediaPlaceholderComponent } from '../../shared/components/media-placeho
   standalone: true,
   imports: [TranslocoModule, MediaPlaceholderComponent],
   templateUrl: './feature-detail.component.html',
+  styleUrl: './feature-detail.component.scss',
 })
 export class FeatureDetailComponent {
   readonly feature = inject(ActivatedRoute).snapshot.data['feature'] as DeepDiveFeature;

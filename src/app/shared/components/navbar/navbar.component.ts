@@ -8,5 +8,6 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
   standalone: true,
   imports: [RouterLink, TranslocoModule, LanguageSwitcherComponent],
   templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {}

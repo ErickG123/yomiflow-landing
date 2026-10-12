@@ -41,5 +41,6 @@ npm run build
 - `src/app/shared/`: Reusable navigation, footer and language controls.
 - `src/app/features/home/`: Home page, presentation and feature models.
 - `public/assets/i18n/{en,pt,es}.json`: Translation dictionaries loaded at runtime.
+- Components follow strict file separation: TypeScript, HTML templates and SCSS styles live in dedicated sibling files to keep the codebase clean, readable and scalable.
 
 Components are standalone. Keep all `interface`, `type` and `enum` declarations in `*.model.ts` files; ESLint enforces the rule. Add secondary screens with route-level `loadComponent`/`loadChildren` so they stay out of the initial bundle. Home copy is based on the current desktop README and `.agents` architecture contexts; download links should be updated when release distribution URLs are finalized.

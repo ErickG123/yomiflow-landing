@@ -5,21 +5,7 @@ import { TranslocoModule } from '@jsverse/transloco';
   selector: 'app-about',
   standalone: true,
   imports: [TranslocoModule],
-  template: `
-    <section class="px-6 py-20 sm:py-28">
-      <div class="mx-auto max-w-4xl">
-        <p class="text-sm font-semibold uppercase tracking-[.2em] text-indigo-300">
-          {{ 'about.eyebrow' | transloco }}
-        </p>
-        <h1 class="mt-5 text-4xl font-semibold tracking-tight sm:text-6xl">
-          {{ 'about.title' | transloco }}
-        </h1>
-        <div class="mt-8 space-y-6 text-lg leading-8 text-zinc-300">
-          <p>{{ 'about.story' | transloco }}</p>
-          <p>{{ 'about.credentials' | transloco }}</p>
-        </div>
-      </div>
-    </section>
-  `,
+  templateUrl: './about.component.html',
+  styleUrl: './about.component.scss',
 })
 export class AboutComponent {}

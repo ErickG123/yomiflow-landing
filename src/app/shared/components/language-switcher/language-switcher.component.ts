@@ -8,6 +8,7 @@ import { LanguageService } from '../../../core/i18n/services/language.service';
   standalone: true,
   imports: [TranslocoModule],
   templateUrl: './language-switcher.component.html',
+  styleUrl: './language-switcher.component.scss',
 })
 export class LanguageSwitcherComponent {
   private readonly languages = inject(LanguageService);

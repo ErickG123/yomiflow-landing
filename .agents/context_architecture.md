@@ -11,6 +11,10 @@ The YomiFlow desktop app is an offline-first Japanese immersion and second-brain
 - Keep templates and styles in separate `.html` and `.scss` files. Use Signals for local reactive UI state when needed.
 - Use Tailwind utilities with the zinc dark surface and indigo/violet brand palette. Avoid inline styles except dynamic values that cannot be expressed as static utility classes.
 
+## Strict File Separation (HTML/SCSS/TS)
+
+**CRITICAL DIRECTIVE — DO NOT generate Angular components with inline templates or styles.** Never put HTML in `template: \`...\``or CSS/SCSS in`styles: [...]`within a`_.component.ts`file. Every component must keep its concerns in dedicated sibling files:`_.component.ts`, `_.component.html`and`_.component.scss`. Use `templateUrl`and`styleUrl`in`@Component`; create the SCSS file even when it is initially empty. Keep component TypeScript limited to behavior, dependency injection and metadata.
+
 ## Strict Models
 
 Never declare `interface`, `type` aliases or `enum` inside `*.component.ts`, `*.service.ts`, `*.guard.ts` or `*.directive.ts`. Put declarations in dedicated `*.model.ts` files next to the feature or service that owns them. ESLint rejects declarations in source TypeScript files; do not suppress the rule to avoid creating the model.

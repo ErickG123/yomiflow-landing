@@ -5,6 +5,7 @@ import { MediaPlaceholderType } from './media-placeholder.model';
   selector: 'app-media-placeholder',
   standalone: true,
   templateUrl: './media-placeholder.component.html',
+  styleUrl: './media-placeholder.component.scss',
 })
 export class MediaPlaceholderComponent {
   readonly type = input.required<MediaPlaceholderType>();
