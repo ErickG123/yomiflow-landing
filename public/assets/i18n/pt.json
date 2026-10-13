@@ -132,17 +132,22 @@
       "windows": {
         "name": "Windows",
         "formats": ".exe / .msi",
-        "button": "Baixar para Windows"
+        "button": "Baixar para Windows",
+        "requirements": "Instalação nativa padrão, sem requisitos adicionais específicos do YomiFlow."
       },
       "macos": {
         "name": "macOS",
         "formats": ".dmg",
-        "button": "Baixar para macOS"
+        "button": "Baixar para macOS",
+        "requirementsTitle": "Exclusivo para Apple Silicon (M1, M2, M3 e posteriores)",
+        "requirements": "Macs com processadores Intel não são suportados nesta versão."
       },
       "linux": {
         "name": "Linux",
         "formats": ".AppImage / .deb",
-        "button": "Baixar para Linux"
+        "button": "Baixar para Linux",
+        "requirementsTitle": "Requer o WebKitGTK",
+        "requirements": "Se estiver ausente, sua distribuição Linux pode solicitar a instalação do WebKitGTK ao abrir o .AppImage ou .deb."
       }
     },
     "requirements": {
