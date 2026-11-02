@@ -5,7 +5,8 @@
     "getApp": "Get the app",
     "language": "Choose language",
     "about": "About",
-    "ariaLabel": "Primary navigation"
+    "ariaLabel": "Primary navigation",
+    "pricing": "Pricing"
   },
   "home": {
     "hero": {
@@ -20,7 +21,7 @@
     "preview": {
       "label": "YOUR STUDY WORKSPACE",
       "title": "Today’s review",
-      "streak": "12 day streak",
+      "streak": "One step at a time",
       "review": "RECALL IN CONTEXT",
       "reading": "日本語を勉強しています。 · nihongo o benkyō shite imasu",
       "again": "Again",
@@ -28,7 +29,7 @@
       "easy": "Easy",
       "activity": "STUDY RHYTHM",
       "local": "A local history of your daily practice",
-      "rhythmMedia": "Study rhythm preview"
+      "rhythmMedia": "YomiFlow spaced review screen"
     },
     "features": {
       "eyebrow": "One connected workflow",
@@ -72,12 +73,14 @@
         "jlpt": "JLPT coverage insights from N5 through N1"
       },
       "panel": {
-        "label": "RETENTION OUTLOOK",
-        "value": "A growing body of knowledge",
-        "trend": "On track",
-        "retention": "Estimated retention",
-        "jlpt": "JLPT coverage",
-        "progressMedia": "Progress analytics preview"
+        "label": "RETENTION & COVERAGE",
+        "value": "Study with context",
+        "trend": "Local data",
+        "retention": "Retention model",
+        "jlpt": "Levels covered",
+        "progressMedia": "Progress analytics preview",
+        "retentionValue": "FSRS",
+        "jlptValue": "N5–N1"
       }
     },
     "audio": {
@@ -117,6 +120,26 @@
           "fsrs": "A native FSRS scheduling engine",
           "offline": "Offline-first study data stored in SQLite",
           "notebook": "An integrated hybrid notebook"
+        }
+      }
+    },
+    "workflow": {
+      "eyebrow": "A CONNECTED STUDY FLOW",
+      "title": "From first encounter to long-term memory.",
+      "subtitle": "Read something that sparks your curiosity, save what you learn, and come back at the right time.",
+      "explore": "Explore this feature",
+      "steps": {
+        "immersion": {
+          "title": "Read in context",
+          "description": "Explore manga and articles with reading tools, vocabulary lookup, and furigana."
+        },
+        "notebook": {
+          "title": "Save what you learn",
+          "description": "Capture sentences and vocabulary in notes with integrated morphology analysis."
+        },
+        "srs": {
+          "title": "Review at the right time",
+          "description": "Revisit cards with spaced repetition and track each review session."
         }
       }
     }
@@ -212,7 +235,8 @@
           "title": "Grammar checks and linked notes",
           "description": "A local heuristic flags a documented particle pattern with a one-click suggestion; [[note]] links connect related notebook entries."
         }
-      }
+      },
+      "mediaCaption": "Notes with morphology analysis"
     },
     "audioVault": {
       "title": "Your listening library, always within reach.",
@@ -235,7 +259,8 @@
           "title": "Search across your study data",
           "description": "Find cards, notebook notes and cached NHK articles with the SQLite FTS5 OmniSearch."
         }
-      }
+      },
+      "mediaCaption": "Local audio library"
     },
     "immersion": {
       "title": "Read and watch Japanese with context in reach.",
@@ -258,7 +283,8 @@
           "title": "From a word to a review",
           "description": "Look up vocabulary in the media context and carry useful discoveries into your spaced-repetition decks."
         }
-      }
+      },
+      "mediaCaption": "Immersive reading"
     },
     "downloadNow": "Download YomiFlow",
     "benefitsEyebrow": "Built for real study sessions",
@@ -283,7 +309,8 @@
           "title": "Useful feedback after a take",
           "description": "Compare recognized text with the target and get a character-level similarity score to guide another attempt."
         }
-      }
+      },
+      "mediaCaption": "Listen and repeat"
     },
     "srs": {
       "title": "Review with a scheduler and a library that work together.",
@@ -306,7 +333,8 @@
           "title": "Make visual details recallable",
           "description": "Mask areas of local images and reveal them during review, then schedule recall with the existing FSRS ratings."
         }
-      }
+      },
+      "mediaCaption": "Spaced review"
     },
     "analytics": {
       "title": "Know what a passage asks of you before you dive in.",
@@ -329,7 +357,8 @@
           "title": "History and what is due next",
           "description": "Review GitHub-style 16-week study heatmaps and upcoming review forecasts, with completed focus sessions tracked locally."
         }
-      }
+      },
+      "mediaCaption": "JLPT progress"
     },
     "kana": {
       "title": "Build kana fluency one character at a time.",
@@ -352,8 +381,10 @@
           "title": "Join the mixed review queue",
           "description": "Kana prompts can be interleaved with vocabulary, grammar and image-occlusion reviews."
         }
-      }
-    }
+      },
+      "mediaCaption": "Kana practice"
+    },
+    "videoUnsupported": "Your browser cannot play this video."
   },
   "about": {
     "eyebrow": "The maker story",

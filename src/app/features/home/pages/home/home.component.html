@@ -52,7 +52,7 @@
           <div class="rounded-xl border border-zinc-800 bg-zinc-900/70 p-5">
             <p class="text-sm text-zinc-400">{{ 'home.preview.review' | transloco }}</p>
             <p class="mt-8 text-3xl">
-              &#26085;&#26412;&#35486;&#12434;&#21223;&#24375;&#12375;&#12390;&#12356;&#12414;&#12377;&#12290;
+              &#26085;&#26412;&#35486;&#12434;&#21193;&#24375;&#12375;&#12390;&#12356;&#12414;&#12377;&#12290;
             </p>
             <p class="mt-3 text-sm text-zinc-500">{{ 'home.preview.reading' | transloco }}</p>
             <div class="mt-8 flex gap-2">
@@ -69,10 +69,12 @@
           </div>
           <div class="rounded-xl border border-zinc-800 bg-zinc-900/70 p-5">
             <p class="text-sm text-zinc-400">{{ 'home.preview.activity' | transloco }}</p>
-            <app-media-placeholder
-              class="mt-6 block"
-              type="image"
-              [label]="'home.preview.rhythmMedia' | transloco"
+            <img
+              class="mt-6 block aspect-video w-full rounded-lg border border-zinc-800 object-cover object-top"
+              src="/assets/videos/posters/srs.jpg"
+              [alt]="'home.preview.rhythmMedia' | transloco"
+              loading="lazy"
+              decoding="async"
             />
             <p class="mt-6 text-xs text-zinc-500">{{ 'home.preview.local' | transloco }}</p>
           </div>
@@ -202,6 +204,51 @@
     </div>
   </div>
 </section>
+<section class="px-6 py-24">
+  <div class="mx-auto max-w-6xl">
+    <header appScrollReveal class="mx-auto max-w-3xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">
+        {{ 'home.workflow.eyebrow' | transloco }}
+      </p>
+      <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+        {{ 'home.workflow.title' | transloco }}
+      </h2>
+      <p class="mt-4 leading-7 text-zinc-400">{{ 'home.workflow.subtitle' | transloco }}</p>
+    </header>
+    <div class="mt-12 grid gap-5 md:grid-cols-3">
+      @for (step of workflowSteps; track step; let index = $index) {
+        <a
+          [routerLink]="featureRoutes[step]"
+          appScrollReveal
+          class="group overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/40 transition hover:-translate-y-1 hover:border-indigo-500/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400"
+        >
+          <img
+            class="block aspect-video w-full border-b border-zinc-800 object-cover object-top"
+            [src]="'/assets/videos/posters/' + workflowMedia[step] + '.jpg'"
+            [alt]="'deepDive.' + step + '.mediaLabel' | transloco"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="p-6">
+            <p class="text-xs font-semibold tracking-[.15em] text-indigo-300">0{{ index + 1 }}</p>
+            <h3 class="mt-3 text-lg font-semibold">
+              {{ 'home.workflow.steps.' + step + '.title' | transloco }}
+            </h3>
+            <p class="mt-3 text-sm leading-6 text-zinc-400">
+              {{ 'home.workflow.steps.' + step + '.description' | transloco }}
+            </p>
+            <span class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-indigo-200">
+              {{ 'home.workflow.explore' | transloco }}
+              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1"
+                >→</span
+              >
+            </span>
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+</section>
 <section class="border-b border-zinc-900 bg-zinc-900/20 px-6 py-24">
   <div class="mx-auto max-w-6xl">
     <header appScrollReveal class="mx-auto max-w-3xl text-center">
@@ -286,20 +333,24 @@
           'home.insights.panel.trend' | transloco
         }}</span>
       </div>
-      <app-media-placeholder
-        class="mt-8 block"
-        type="image"
-        [label]="'home.insights.panel.progressMedia' | transloco"
+      <img
+        class="mt-8 block aspect-video w-full rounded-xl border border-zinc-800 object-cover object-top"
+        src="/assets/videos/posters/analytics.jpg"
+        [alt]="'home.insights.panel.progressMedia' | transloco"
+        loading="lazy"
+        decoding="async"
       />
       <div class="mt-6 grid grid-cols-2 gap-3">
         <div class="rounded-xl bg-zinc-950 p-4">
           <p class="text-xs text-zinc-500">{{ 'home.insights.panel.retention' | transloco }}</p>
-          <p class="mt-2 text-xl font-semibold">86%</p>
+          <p class="mt-2 text-xl font-semibold">
+            {{ 'home.insights.panel.retentionValue' | transloco }}
+          </p>
         </div>
         <div class="rounded-xl bg-zinc-950 p-4">
           <p class="text-xs text-zinc-500">{{ 'home.insights.panel.jlpt' | transloco }}</p>
           <p class="mt-2 text-xl font-semibold">
-            N3 <span class="text-sm text-indigo-300">+12%</span>
+            {{ 'home.insights.panel.jlptValue' | transloco }}
           </p>
         </div>
       </div>

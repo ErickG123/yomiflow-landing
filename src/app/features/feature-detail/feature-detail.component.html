@@ -26,11 +26,26 @@
     </a>
 
     <div class="mt-12 rounded-3xl border border-zinc-800 bg-zinc-900/40 p-2 sm:p-3">
-      <app-media-placeholder
-        class="block"
-        type="video"
-        [label]="'deepDive.' + feature + '.mediaLabel' | transloco"
-      />
+      <figure class="relative overflow-hidden rounded-2xl bg-zinc-950">
+        <video
+          class="block aspect-video w-full object-cover"
+          controls
+          autoplay
+          muted
+          playsinline
+          preload="metadata"
+          [poster]="videoPoster"
+          [attr.aria-label]="'deepDive.' + feature + '.mediaLabel' | transloco"
+        >
+          <source [src]="videoSource" type="video/mp4" />
+          {{ 'deepDive.videoUnsupported' | transloco }}
+        </video>
+        <figcaption
+          class="pointer-events-none absolute bottom-4 left-4 rounded-lg bg-zinc-950/75 px-3 py-2 text-sm font-medium text-white shadow-lg backdrop-blur-sm"
+        >
+          {{ 'deepDive.' + feature + '.mediaCaption' | transloco }}
+        </figcaption>
+      </figure>
     </div>
 
     <div class="mt-16">

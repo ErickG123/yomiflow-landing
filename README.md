@@ -1,46 +1,47 @@
 # YomiFlow Landing
 
-Standalone Angular SPA introducing YomiFlow, the offline-first Japanese immersion and study desktop app. The page is localized in English (default), Portuguese and Spanish using Transloco.
+The product website for [YomiFlow](https://github.com/ErickG123/yomiflow), an offline-first desktop workspace for learning Japanese. The site is built with Angular and is available in English, Portuguese, and Spanish.
 
-## Requirements and setup
+## Product preview
 
-- Node.js 20+ and npm
-- Angular CLI (or use the project's npm scripts)
+These screenshots come from the app's silent feature walkthroughs. Open a feature page on the site to watch its full clip.
+
+| Immersive reading | Japanese notebook | Spaced repetition |
+| --- | --- | --- |
+| ![Manga reader with an original Japanese page](public/assets/videos/posters/immersion.jpg) | ![Notebook with Japanese morphology analysis](public/assets/videos/posters/notebook.jpg) | ![Spaced repetition review card](public/assets/videos/posters/srs.jpg) |
+
+Feature demos are available on the [reader page](public/assets/videos/immersion.mp4), [notebook page](public/assets/videos/notebook.mp4), [SRS page](public/assets/videos/srs.mp4), and the pages for [Audio Vault](public/assets/videos/audio-vault.mp4), [Shadowing](public/assets/videos/shadowing.mp4), [Kana Dojo](public/assets/videos/kana.mp4), and [JLPT Analytics](public/assets/videos/analytics.mp4). The clips have no voice-over or audio track.
+
+## Run locally
+
+Requirements: Node.js 20+ and npm.
 
 ```bash
-cd yomiflow-landing
-npm install
+npm ci
 npm start
 ```
 
-To create this scaffold from the parent directory:
+The development server is available at `http://localhost:4200`.
 
-```bash
-npx @angular/cli new yomiflow-landing --standalone --routing --style=scss
-cd yomiflow-landing
-npm install @jsverse/transloco
-npm install -D tailwindcss postcss autoprefixer
-npm install -D husky lint-staged @commitlint/cli @commitlint/config-conventional prettier eslint typescript-eslint @angular-eslint/eslint-plugin @angular-eslint/eslint-plugin-template @angular-eslint/template-parser
-npx husky init
-```
-
-Tailwind 3 uses `tailwind.config.js` and `postcss.config.js`; global base styles and the slim dark scrollbar live in `src/styles.scss`.
-
-## Quality hooks
-
-`npm run prepare` initializes Husky. The `pre-commit` hook runs `lint-staged`, which formats staged TypeScript, HTML and SCSS with Prettier and applies ESLint fixes. `commit-msg` checks the Conventional Commits format via commitlint. Examples: `feat: add language switcher`, `fix: correct mobile spacing`, `docs: clarify setup`.
+## Quality checks
 
 ```bash
 npm run lint
 npm run build
 ```
 
-## Architecture
+## Project structure
 
-- `src/app/core/`: Transloco configuration, SEO metadata service and app-wide services.
-- `src/app/shared/`: Reusable navigation, footer and language controls.
-- `src/app/features/home/`: Home page, presentation and feature models.
-- `public/assets/i18n/{en,pt,es}.json`: Translation dictionaries loaded at runtime.
-- Components follow strict file separation: TypeScript, HTML templates and SCSS styles live in dedicated sibling files to keep the codebase clean, readable and scalable.
+- `src/app/features/home/`: home page and product overview.
+- `src/app/features/feature-detail/`: localized feature pages and video player.
+- `src/app/features/download/` and `src/app/features/pricing/`: download information and pricing.
+- `src/app/core/`: language and SEO services.
+- `src/app/shared/`: navigation, footer, and reusable UI.
+- `public/assets/i18n/`: English, Portuguese, and Spanish translations.
+- `public/assets/videos/`: silent feature demos and their poster images.
 
-Components are standalone. Keep all `interface`, `type` and `enum` declarations in `*.model.ts` files; ESLint enforces the rule. Add secondary screens with route-level `loadComponent`/`loadChildren` so they stay out of the initial bundle. Home copy is based on the current desktop README and `.agents` architecture contexts; download links should be updated when release distribution URLs are finalized.
+The app's current download page is a preview; platform installers will be linked when public release packages are available.
+
+## Contributing
+
+Components are standalone, with TypeScript, HTML, and SCSS kept in sibling files. Use route-level lazy loading for secondary pages. Commits follow [Conventional Commits](https://www.conventionalcommits.org/), and Husky runs formatting, lint, and commit-message checks.

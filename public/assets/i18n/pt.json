@@ -5,7 +5,8 @@
     "getApp": "Conheça o app",
     "language": "Escolher idioma",
     "about": "Sobre",
-    "ariaLabel": "Navega??o principal"
+    "ariaLabel": "Navega??o principal",
+    "pricing": "Preços"
   },
   "home": {
     "hero": {
@@ -20,7 +21,7 @@
     "preview": {
       "label": "SEU ESPAÇO DE ESTUDO",
       "title": "Revisões de hoje",
-      "streak": "12 dias seguidos",
+      "streak": "Um passo por vez",
       "review": "RECORDE NO CONTEXTO",
       "reading": "日本語を勉強しています。 · nihongo o benkyō shite imasu",
       "again": "De novo",
@@ -28,7 +29,7 @@
       "easy": "Fácil",
       "activity": "RITMO DE ESTUDO",
       "local": "Um histórico local da sua prática diária",
-      "rhythmMedia": "Pr?via do ritmo de estudos"
+      "rhythmMedia": "Tela de revisões do YomiFlow"
     },
     "features": {
       "eyebrow": "Um fluxo conectado",
@@ -72,12 +73,14 @@
         "jlpt": "Indicadores de cobertura JLPT do N5 ao N1"
       },
       "panel": {
-        "label": "PERSPECTIVA DE RETENÇÃO",
-        "value": "Conhecimento em construção",
-        "trend": "No caminho",
-        "retention": "Retenção estimada",
-        "jlpt": "Cobertura JLPT",
-        "progressMedia": "Pr?via das an?lises de progresso"
+        "label": "RETENÇÃO E COBERTURA",
+        "value": "Estudo com contexto",
+        "trend": "Dados locais",
+        "retention": "Modelo de retenção",
+        "jlpt": "Níveis analisados",
+        "progressMedia": "Pr?via das an?lises de progresso",
+        "retentionValue": "FSRS",
+        "jlptValue": "N5–N1"
       }
     },
     "audio": {
@@ -117,6 +120,26 @@
           "fsrs": "Motor de agendamento FSRS nativo",
           "offline": "Dados offline-first armazenados em SQLite",
           "notebook": "Caderno híbrido integrado"
+        }
+      }
+    },
+    "workflow": {
+      "eyebrow": "UM FLUXO DE ESTUDO CONECTADO",
+      "title": "Do primeiro contato à memória de longo prazo.",
+      "subtitle": "Leia algo que desperte sua curiosidade, registre o que aprendeu e retome no momento certo.",
+      "explore": "Conheça o recurso",
+      "steps": {
+        "immersion": {
+          "title": "Leia no contexto",
+          "description": "Explore mangás e textos com ferramentas de leitura, consulta de vocabulário e furigana."
+        },
+        "notebook": {
+          "title": "Guarde o que aprendeu",
+          "description": "Registre frases e palavras em notas com análise morfológica integrada."
+        },
+        "srs": {
+          "title": "Reveja no momento certo",
+          "description": "Retome cartões com repetição espaçada e acompanhe cada sessão de revisão."
         }
       }
     }
@@ -213,7 +236,8 @@
           "title": "Leitura assistida",
           "description": "Consulte palavras e leituras enquanto mantém o material de estudo no seu fluxo de imersão."
         }
-      }
+      },
+      "mediaCaption": "Leitura imersiva"
     },
     "notebook": {
       "title": "Um caderno que entende japonês.",
@@ -236,7 +260,8 @@
           "title": "Notas conectadas",
           "description": "Ligue notas com referências [[nota]] e navegue pelas conexões bidirecionais."
         }
-      }
+      },
+      "mediaCaption": "Notas com análise morfológica"
     },
     "shadowing": {
       "title": "Ouça, repita e pratique.",
@@ -259,7 +284,8 @@
           "title": "Ajustado ao ambiente",
           "description": "O tratamento de erros de rede deixa mais claro quando um recurso de fala não pode ser usado."
         }
-      }
+      },
+      "mediaCaption": "Ouça e repita"
     },
     "srs": {
       "title": "Revisões ajustadas à memória.",
@@ -282,7 +308,8 @@
           "title": "Histórico consistente",
           "description": "Referências e exclusões em cascata ajudam a manter os dados relacionados organizados."
         }
-      }
+      },
+      "mediaCaption": "Revisão espaçada"
     },
     "analytics": {
       "title": "Saiba o que você já conhece.",
@@ -305,7 +332,8 @@
           "title": "Cobertura e retenção",
           "description": "Veja separadamente o vocabulário reconhecido e as estimativas de retenção FSRS."
         }
-      }
+      },
+      "mediaCaption": "Progresso JLPT"
     },
     "kana": {
       "title": "Ganhe fluência em kana.",
@@ -328,7 +356,8 @@
           "title": "Prática persistente",
           "description": "Seu progresso do Dojo é mantido localmente no SQLite."
         }
-      }
+      },
+      "mediaCaption": "Treino de kana"
     },
     "audioVault": {
       "title": "Sua biblioteca de áudio",
@@ -351,8 +380,10 @@
           "title": "Feito para estudar",
           "description": "Mantenha o áudio conectado às suas rotinas de japonês."
         }
-      }
-    }
+      },
+      "mediaCaption": "Biblioteca de áudio local"
+    },
+    "videoUnsupported": "Seu navegador não consegue reproduzir este vídeo."
   },
   "about": {
     "eyebrow": "A história de quem criou",
